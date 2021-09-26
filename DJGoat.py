@@ -10,7 +10,7 @@ from discord.ext import commands,tasks
 # WEBHOOK METHOD
 def testWebHook(value):
 	# Webhook of my channel. Click on edit channel --> Webhooks --> Creates webhook
-	mUrl = ""
+	mUrl = "https://discord.com/api/webhooks/656951103426134037/MRrI8DvZB69JNIOazSgT1AM6EWvjRL4um3HiDjqueKGlBADNaHwWKvxyDMC8uomW6-5Q"
 
 	data = {"content": value}
 	response = requests.post(mUrl, json=data)
@@ -81,7 +81,7 @@ class YTDLSource(discord.PCMVolumeTransformer):
 
 # PROGRAM INIT CODE
 load_dotenv()
-TOKEN = ''
+TOKEN = 'ODg4OTI1Mjg5MjA2NDAzMTQy.YUZyMA.YJSWS-1u3aRE1XWgEsgrbjn9lHU'
 
 queue = []
 intents = discord.Intents().all()
@@ -170,19 +170,19 @@ async def stop(ctx):
 		testWebHook("The bot is not playing anything at the moment.")
 
 # COMMAND TO THE BOT TO CLEAR ALL ITEMS IN PLAYER QUEUE
-@bot.command(name='clear', help='Clears queue')
-async def clear(ctx):
-	voice_client = ctx.message.guild.voice_client
-	if voice_client.is_playing():
-		await voice_client.stop()
-		testWebHook("The bot has been stopped.")
-	else:
-		testWebHook("The bot is not playing anything at the moment.")
+#@bot.command(name='clear', help='Clears queue')
+#async def clear(ctx):
+#	voice_client = ctx.message.guild.voice_client
+#	if voice_client.is_playing():
+#		await voice_client.stop()
+#		testWebHook("The bot has been stopped.")
+#	else:
+#		testWebHook("The bot is not playing anything at the moment.")
 
 # COMMAND THE BOT TO SHOW THE LIST OF AVAILABLE COMMANDS
 @bot.command(name='commands', help='To reply back with all bot commands')
 async def commands(ctx):
-	testWebHook("# !clear - command the bot to clear out all items in player queue and stops player.\n# !stop - commands the bot to stop the current item in player queue and moves to next.\n# !resume - command the bot to resume paused item being played from player queue.\n# !pause - command the bot to pause the item being played from player queue.\n# !play - command the bot to play audio from a URL parameter passed.\n# !join - command the bot to join voice channel of message author.\n# !leave - command the bot to leave voice channel of message author.\n# !list - command the bot to print all items in player queue.")
+	testWebHook("# !clear - [DISABLED] command the bot to clear out all items in player queue and stops player.\n# !stop - commands the bot to stop the current item in player queue and moves to next.\n# !resume - command the bot to resume paused item being played from player queue.\n# !pause - command the bot to pause the item being played from player queue.\n# !play - command the bot to play audio from a URL parameter passed.\n# !join - command the bot to join voice channel of message author.\n# !leave - command the bot to leave voice channel of message author.\n# !list - command the bot to print all items in player queue.")
 
 # COMMAND THE BOT TO SHOW LIST OF ITEMS IN PLAYER QUEUE
 @bot.command(name='list', help='To view all queued player items')
