@@ -10,7 +10,7 @@ from discord.ext import commands,tasks
 # WEBHOOK METHOD
 def testWebHook(value):
 	# Webhook of my channel. Click on edit channel --> Webhooks --> Creates webhook
-	mUrl = "https://discord.com/api/webhooks/656951103426134037/MRrI8DvZB69JNIOazSgT1AM6EWvjRL4um3HiDjqueKGlBADNaHwWKvxyDMC8uomW6-5Q"
+	mUrl = ""
 
 	data = {"content": value}
 	response = requests.post(mUrl, json=data)
@@ -81,7 +81,7 @@ class YTDLSource(discord.PCMVolumeTransformer):
 
 # PROGRAM INIT CODE
 load_dotenv()
-TOKEN = 'ODg4OTI1Mjg5MjA2NDAzMTQy.YUZyMA.YJSWS-1u3aRE1XWgEsgrbjn9lHU'
+TOKEN = ''
 
 queue = []
 intents = discord.Intents().all()
